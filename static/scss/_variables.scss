@@ -1,0 +1,26 @@
+/********** @VARIABLES *********/
+
+$brand: #004C99;
+$brand: #002B57;
+
+$white: #ffffff;
+$ultra-light: #fafafa;
+$light: #F1F1F1;
+$medium-light: #DEE4E8;
+$medium: #9B9B9B;
+$dark: #222;
+
+
+$transition-duration: .75s;
+
+$lg-size: 1201px;
+$lg-query: "min-width: #{ $lg-size }";
+
+$md-size: 1200px;
+$md-query: "max-width: #{$md-size}";
+
+$sm-size: 992px;
+$sm-query: "max-width: #{$sm-size}";
+
+$xs-size: 767px;
+$xs-query: "max-width: #{ $xs-size }";

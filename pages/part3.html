@@ -1,0 +1,25 @@
+{# ------------------------------------------------------- #}
+
+{# Part 3 #}
+
+{# ------------------------------------------------------- #}
+
+{% block definitions %} 
+  {% set item = cms.part3 %}
+  {% set part_number = '3' %}
+{% endblock %}
+
+{% extends "templates/partials/base.html" %}
+
+{% block body_attributes %}class="body-part3 body-part header-before modal-closed menu-closed loading"{% endblock %}
+
+{% block content %}
+
+  {% include "templates/partials/part-front-matter.html" %}
+  {% include "templates/partials/part-sections.html" %}
+  
+{% endblock %}
+
+{% block scripts_extra %}
+
+{% endblock %}

@@ -1,0 +1,73 @@
+
+<div id="body" class="nav-display">
+
+{% set sectionCount = 6 %}
+{% set sectionCountArray = Array(sectionCount) %}
+
+{% for i, x in sectionCountArray %}
+	
+	{% set section_number = i + 1 %}
+
+	{% if i == 0 %}
+		{% set section_body = item.section_1_body %}
+		{% set section_title = item.section_1_title %}
+		{% set section_subtitle = item.section_1_subtitle %}
+	{% endif %}
+	{% if i == 1 %}
+		{% set section_body = item.section_2_body %}
+		{% set section_title = item.section_2_title %}
+		{% set section_subtitle = item.section_2_subtitle %}		
+	{% endif %}
+	{% if i == 2 %}
+		{% set section_body = item.section_3_body %}
+		{% set section_title = item.section_3_title %}
+		{% set section_subtitle = item.section_3_subtitle %}		
+	{% endif %}
+	{% if i == 3 %}
+		{% set section_body = item.section_4_body %}
+		{% set section_title = item.section_4_title %}
+		{% set section_subtitle = item.section_4_subtitle %}		
+	{% endif %}
+	{% if i == 4 %}
+		{% set section_body = item.section_5_body %}
+		{% set section_title = item.section_5_title %}
+		{% set section_subtitle = item.section_5_subtitle %}		
+	{% endif %}
+	{% if i == 5 %}
+		{% set section_body = item.section_6_body %}
+		{% set section_title = item.section_6_title %}
+		{% set section_subtitle = item.section_6_subtitle %}		
+	{% endif %}				
+
+	{% if section_body %}
+		<section class="block part-section bg-white" data-bread-crumb="{{part_number}}.{{section_number}}" id="section{{section_number}}">
+			  	<div class="container">
+			  		<div class="row">
+				  		<div class="col-sm-11 col-sm-offset-1 col-xs-10">
+							<h3 class="section-number medium tracked-more m0">
+								{{part_number}}.{{section_number}}
+							</h3>
+							<h2 class="section-title uppercase tracked-more mt0 mb2">
+								{{section_title}}
+							</h2>
+							<h4 class="section-subtitle mb6 hidden">
+								{{section_subtitle}}
+							</h4>
+				  		</div>
+				  	</div>
+					<div class="row">
+				  		<div class="col-sm-10 col-sm-offset-1">
+				  			<div class="wysiwyg section-body section-body-wysiwyg">
+								{{section_body|safe}}		
+				  			</div>
+				  		</div>
+			    	</div>
+				</div>
+				<div class="divider"></div>
+		</section>
+	{% endif %}
+
+{% endfor %}
+
+</div>
+

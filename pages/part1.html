@@ -1,0 +1,26 @@
+{# ------------------------------------------------------- #}
+
+{# Part 1 #}
+
+{# ------------------------------------------------------- #}
+
+{% block definitions %} 
+  {% set item = cms.part1 %}
+  {% set part_number = '1' %}
+{% endblock %}
+
+{% extends "templates/partials/base.html" %}
+
+{% block body_attributes %}class="body-part1 body-part header-before modal-closed menu-closed loading"{% endblock %}
+
+{% block content %}
+
+  {% include "templates/partials/part-front-matter.html" %}
+  {% include "templates/partials/part-sections.html" %}
+  {% include "templates/partials/stopover.html" %}
+  
+{% endblock %}
+
+{% block scripts_extra %}
+
+{% endblock %}

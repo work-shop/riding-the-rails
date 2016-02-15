@@ -1,0 +1,51 @@
+{# ------------------------------------------------------- #}
+
+{# MENU #}
+
+{# partial #}
+
+{# ------------------------------------------------------- #}
+
+{% set currentUrl = getCurrentUrl() %}
+
+<menu class="closed" id="menu">
+	<nav id="menu-nav">
+		<ul class="">
+			<li><a href="/#prologue" class="uppercase {% if currentUrl == '/' %}nav-item-active{% endif %}">Prologue</a></li>
+			<li class="sub-list-parent">
+				<a href="/part1" class="uppercase {% if currentUrl == '/part1/' %}nav-item-active{% endif %}">Part 1</a>
+				<ul class="open sub-list">
+					<li><a href="/part1#section1">{{ cms.part1.section_1_title }}</a></li>
+					<li><a href="/part1#section2">{{ cms.part1.section_2_title }}</a></li>
+					<li><a href="/part1#section3">{{ cms.part1.section_3_title }}</a></li>
+					<li><a href="/part1#section4">{{ cms.part1.section_4_title }}</a></li>
+					<li><a href="/part1#section5">{{ cms.part1.section_5_title }}</a></li>					
+					<li><a href="/part1#stopover" class="nav-item-stopover">Stopover: {{ cms.part1.stopover_title }}</a></li>
+
+				</ul>
+			</li>
+			<li class="sub-list-parent">
+				<a href="/part2" class="uppercase {% if currentUrl == '/part2/' %}nav-item-active{% endif %}">Part 2</a>
+				<ul class="open sub-list">
+					<li><a href="/part2#section1">{{ cms.part2.section_1_title }}</a></li>
+					<li><a href="/part2#section2">{{ cms.part2.section_2_title }}</a></li>
+					<li><a href="/part2#section3">{{ cms.part2.section_3_title }}</a></li>
+					<li><a href="/part2#section4">{{ cms.part2.section_4_title }}</a></li>
+					<li><a href="/part2#section5">{{ cms.part2.section_5_title }}</a></li>
+					<li><a href="/part2#section6">{{ cms.part2.section_6_title }}</a></li>
+					<li><a href="/part2#stopover" class="nav-item-stopover">Stopover: {{ cms.part2.stopover_title }}</a></li>					
+				</ul>
+			</li>
+			<li class="sub-list-parent">
+				<a href="/part3" class="uppercase {% if currentUrl == '/part3/' %}nav-item-active{% endif %}">Part 3</a>
+				<ul class="open sub-list">
+					<li><a href="/part3#section1">{{ cms.part3.section_1_title }}</a></li>
+					<li><a href="/part3#section2">{{ cms.part3.section_2_title }}</a></li>
+				</ul>
+			</li>
+			<li><a href="/epilogue" class="uppercase {% if currentUrl == '/epilogue/' %}nav-item-active{% endif %}">Epilogue</a></li>
+		</ul>
+	</nav>
+</menu>
+<div id="blanket" class="off">
+</div>

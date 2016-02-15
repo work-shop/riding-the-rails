@@ -1,0 +1,74 @@
+<section class="block table-of-contents part-table-of-contents bg-light padded" id="part-table-of-contents">
+  	<div class="container">
+		<div class="row">
+	  		<div class="col-sm-10 col-sm-offset-1 mb2">
+	  			<h2 class="medium uppercase tracked-more">
+	  				Part {{part_number}}<br/>
+	  				Table of Contents
+	  			</h2>
+	  		</div>
+	  		<div class="col-sm-8 col-sm-offset-1">
+
+			{% set sectionCount = 6 %}
+			{% set sectionCountArray = Array(sectionCount) %}
+
+			{% for i, x in sectionCountArray %}
+				
+				{% set section_number = i + 1 %}
+
+				{% if i == 0 %}
+					{% set section_body = item.section_1_body %}
+					{% set section_title = item.section_1_title %}
+					{% set section_subtitle = item.section_1_subtitle %}
+				{% endif %}
+				{% if i == 1 %}
+					{% set section_body = item.section_2_body %}
+					{% set section_title = item.section_2_title %}
+					{% set section_subtitle = item.section_2_subtitle %}		
+				{% endif %}
+				{% if i == 2 %}
+					{% set section_body = item.section_3_body %}
+					{% set section_title = item.section_3_title %}
+					{% set section_subtitle = item.section_3_subtitle %}		
+				{% endif %}
+				{% if i == 3 %}
+					{% set section_body = item.section_4_body %}
+					{% set section_title = item.section_4_title %}
+					{% set section_subtitle = item.section_4_subtitle %}		
+				{% endif %}
+				{% if i == 4 %}
+					{% set section_body = item.section_5_body %}
+					{% set section_title = item.section_5_title %}
+					{% set section_subtitle = item.section_5_subtitle %}		
+				{% endif %}
+				{% if i == 5 %}
+					{% set section_body = item.section_6_body %}
+					{% set section_title = item.section_6_title %}
+					{% set section_subtitle = item.section_6_subtitle %}		
+				{% endif %}				
+
+				{% if section_body %}
+		  			<div class="row" >
+		  				<a href="#section{{section_number}}" class="jump">
+							<div class="part-table-of-contents-number col-sm-2">
+								<h3 class="brand tracked">{{part_number}}.{{section_number}}</h3>
+							</div>
+							<div class="part-table-of-contents-title col-sm-10">
+								<h3 class="uppercase tracked">
+									{{section_title}}
+								</h3>
+								<h4 class="ss-medium">
+									{{section_subtitle}}
+								</h4>
+							</div>
+						</a>
+					</div>
+		
+				{% endif %}
+
+			{% endfor %}
+	  		</div>
+    	</div>
+	</div>
+</section>
+

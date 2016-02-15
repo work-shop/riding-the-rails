@@ -1,0 +1,34 @@
+<section class="block crop landing-screen epilogue-landing-screen height-full" id="epilogue-landing-screen">
+	<div class="block-background">
+	  <video autoplay loop muted class="">
+    	<source src="{{item.landing_screen_video.url}}" type="video/mp4">
+  	</video>
+	</div>
+	<div class="vertical-center">
+	  	<div class="container">
+			<div class="row">
+		  		<div class="col-sm-8 col-sm-offset-2 mt5">
+		  			<h1 class="ss-extrabold tracked-more brand uppercase site-title title">
+		  				{{item.title}}		
+		  			</h1>
+		        	<h2 class="white ss-medium site-subtitle subtitle">
+		        		{{item.subtitle}}
+		        	</h2>
+		  		</div>
+	    	</div>
+		</div>
+	</div>
+</section>
+
+
+<section class="block epilogue-body bg-white padded" id="epilogue-body">
+  	<div class="container">
+		<div class="row">
+	  		<div class="col-sm-10 col-sm-offset-1">
+	  			<div class="wysiwyg section-body section-body-wysiwyg serif">
+					{{item.epilogue_body|safe}}		
+	  			</div>
+	  		</div>
+    	</div>
+	</div>
+</section>

@@ -1,0 +1,23 @@
+{# ------------------------------------------------------- #}
+
+{# Home #}
+
+{# ------------------------------------------------------- #}
+
+{% block definitions %} 
+  {% set item = cms.home %}
+{% endblock %}
+
+{% extends "templates/partials/base.html" %}
+
+{% block body_attributes %}class="body-home header-before modal-closed menu-closed loading"{% endblock %}
+
+{% block content %}
+
+  {% include "templates/partials/home-content.html" %}
+  
+{% endblock %}
+
+{% block scripts_extra %}
+
+{% endblock %}

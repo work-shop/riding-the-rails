@@ -1,0 +1,44 @@
+#section1{
+	padding-top: 150px;
+}
+
+
+.part-section{
+
+	// &:after{
+	// 	content: '';
+	// 	display: block;
+	// 	width: 160px;
+	// 	height: 8px;
+	// 	background: lighten($brand,2%);
+	// 	margin: 110px auto 150px auto;
+	// }
+}
+
+	.divider{
+		content: '';
+		display: block;
+		width: 160px;
+		height: 8px;
+		background: lighten($brand,2%);
+		margin: 110px auto 150px auto;
+	}
+
+.next{
+	.block-background{
+		video{
+			opacity: .9;
+		}
+	}
+}
+
+.next-item{
+	h2,.icon:before,h3{
+		@include transition(color,.1s);
+	}
+	&:hover{
+		h2,.icon:before,h3{
+			color: white;
+		}
+	}
+}

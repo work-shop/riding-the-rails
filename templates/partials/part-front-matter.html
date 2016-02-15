@@ -1,0 +1,34 @@
+
+
+<section class="block target-initial landing-screen crop part-landing-screen height-eighty" id="part-landing-screen">
+	<div class="block-background">
+	  <video autoplay loop muted>
+    	<source src="{{item.landing_screen_video.url}}" type="video/mp4">
+  	</video>
+	</div>
+	<div class="vertical-center">
+	  	<div class="container">
+			<div class="row">
+		  		<div class="col-sm-8 col-sm-offset-1 mt9">
+		  			<h2 class="brand uppercase part-number">{{item.name}}:</h2>
+		  			<h1 class="ss-extrabold brand uppercase part-title title">{{item.part_title}}</h1>
+		        	<h3 class="white ss-medium part-subtitle subtitle">{{item.part_subtitle}}</h3>
+		  		</div>
+	    	</div>
+		</div>
+	</div>
+</section>
+
+<section class="block introduction part-introduction bg-medium-light padded" id="part-introduction">
+	  	<div class="container">
+			<div class="row">
+		  		<div class="col-sm-9 col-sm-offset-1">
+		  			<div class="wysiwyg section serif">
+		  				{{item.part_introduction_body|safe}}
+		  			</div>
+		  		</div>
+	    	</div>
+		</div>
+</section>
+
+{% include "templates/partials/part-table-of-contents.html" %}

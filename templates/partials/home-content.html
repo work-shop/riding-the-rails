@@ -1,0 +1,56 @@
+<section class="block crop landing-screen home-landing-screen height-full" id="home-landing-screen">
+	<div class="block-background">
+	  <video autoplay loop muted class="">
+    	<source src="{{item.landing_screen_video.url}}" type="video/mp4">
+  	</video>
+	</div>
+	<div class="vertical-center">
+	  	<div class="container">
+			<div class="row">
+		  		<div class="col-sm-8 col-sm-offset-2 mt5">
+		  			<h1 class="ss-extrabold tracked-more brand uppercase site-title title">
+		  				Riding<br/>
+		  				&nbsp;The<br/>
+		  				Rails
+		  			</h1>
+		        	<h2 class="white ss-medium site-subtitle subtitle">{{item.site_subtitle}}</h2>
+		        	<h4 class="white ss-medium">by Melissa Alexander</h4>
+		  		</div>
+	    	</div>
+		</div>
+	</div>
+</section>
+
+{% include "templates/partials/site-table-of-contents.html" %}
+
+<section class="block landing-screen prologue-landing-screen height-full" id="prologue">
+	<div class="block-background background-mask-broken">
+	  <video autoplay loop muted>
+    	<source src="{{item.prologue_landing_screen_video.url}}" type="video/mp4">
+  	</video>
+	</div>
+	<div class="vertical-center">
+	  	<div class="container">
+			<div class="row">
+		  		<div class="col-sm-8 col-sm-offset-2 mt5">
+		  			<h1 class="ss-extrabold tracked-more brand uppercase part-title mt2 title">
+						{{item.title}}
+		  			</h1>
+		        	<h2 class="white ss-medium part-subtitle subtitle">{{item.subtitle}}</h2>
+		  		</div>
+	    	</div>
+		</div>
+	</div>
+</section>
+
+<section class="block prologue bg-white padded" id="prologue-body">
+  	<div class="container">
+		<div class="row">
+	  		<div class="col-sm-10 col-sm-offset-1">
+	  			<div class="wysiwyg section-body section-body-wysiwyg serif">
+					{{item.prologue_body|safe}}		
+	  			</div>
+	  		</div>
+    	</div>
+	</div>
+</section>

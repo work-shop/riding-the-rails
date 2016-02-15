@@ -1,0 +1,37 @@
+{# ------------------------------------------------------- #}
+
+{# HEADER #}
+
+{# partial #}
+
+{# ------------------------------------------------------- #}
+
+{% set currentUrl = getCurrentUrl() %}
+
+<header id="header" class="before closed hidden-xs">
+	<nav id="header-nav">
+		<ul>
+			<li class=""><a href="/">Riding The Rails</a></li>
+			<li class="">
+				<a href="#">
+				<span id="header-nav-bread-crumbs-page">{{item.name}}</span> 
+				<span id="header-nav-bread-crumbs-slash"></span> 
+				<span id="header-nav-bread-crumbs-section"></span> 
+				</a>
+			</li>
+		</ul>
+	</nav>
+</header>
+
+<div id="menu-toggle" class="closed">
+	<a class="menu-toggle" href="#">
+		<div id="hamburger">
+			<span class="line line-1"></span>
+			<span class="line line-2"></span>
+			<span class="line line-3"></span>
+		</div>
+		<div id="label"><span class="medium uppercase">Outline</span></div>
+	</a>
+</div>
+
+<a id="cms" href="/cms"></a>

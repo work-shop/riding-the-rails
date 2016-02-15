@@ -1,0 +1,23 @@
+{# ------------------------------------------------------- #}
+
+{# Epilogue #}
+
+{# ------------------------------------------------------- #}
+
+{% block definitions %} 
+  {% set item = cms.epilogue %}
+{% endblock %}
+
+{% extends "templates/partials/base.html" %}
+
+{% block body_attributes %}class="body-epilogue header-before modal-closed menu-closed loading"{% endblock %}
+
+{% block content %}
+
+  {% include "templates/partials/epilogue-content.html" %}
+  
+{% endblock %}
+
+{% block scripts_extra %}
+
+{% endblock %}

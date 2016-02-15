@@ -1,0 +1,144 @@
+
+<section class="block next crop height-full" id="next">
+	<div class="block-background">
+	  	<video autoplay loop muted>
+    		<source src="{{item.landing_screen_video.url}}" type="video/mp4">
+  		</video>
+	</div>
+	<div class="vertical-center">
+	  	<div class="container">
+			<div class="row">
+
+				{% if currentUrl == '/' %}
+					<a href="/part1/" class="next-item">
+				  		<div class="col-sm-4 col-sm-offset-3">
+				  			<div class=" bordered-broken">
+								<h3 class="tracked uppercase">
+									Part 1
+								</h3>
+								<h2 class="ss-extrabold uppercase tracked-more mt0">
+									{{cms.part1.part_title}}
+								</h2>
+							</div>
+				  		</div>
+						<div class="col-sm-1 mt3 hidden-xs">
+							<span class="icon large" data-icon="„"></span>
+						</div>				  		
+			  		</a>
+				{% endif %}
+
+				{% if currentUrl == '/part1/' %}
+					<a href="/#prologue" class="next-item">
+						<div class="col-sm-1 righted mt3 hidden-xs">
+							<span class="icon righted large" data-icon="‰"></span>
+						</div>
+				  		<div class="col-sm-5">
+				  			<div class=" bordered-broken">
+								<h2 class="ss-extrabold uppercase tracked-more mt2">
+									Prologue
+								</h2>
+							</div>
+				  		</div>
+				  	</a>
+				  	<a href="/part2/" class="next-item">
+				  		<div class="col-sm-5">
+				  			<div class=" bordered-broken righted">
+								<h3 class="tracked uppercase">
+									Part 2
+								</h3>
+								<h2 class="ss-extrabold uppercase tracked-more mt0">
+									{{cms.part2.part_title}}
+								</h2>
+							</div>
+				  		</div>
+				  		<div class="col-sm-1 mt3 hidden-xs">
+							<span class="icon large" data-icon="„"></span>
+				  		</div>	
+			  		</a>  
+				{% endif %}
+
+				{% if currentUrl == '/part2/' %}
+					<a href="/part1/" class="next-item">
+						<div class="col-sm-1 righted mt3 hidden-xs">
+							<span class="icon righted large" data-icon="‰"></span>
+						</div>
+				  		<div class="col-sm-5">
+				  			<div class=" bordered-broken">
+								<h3 class="tracked uppercase">
+									Part 1
+								</h3>
+								<h2 class="ss-extrabold uppercase tracked-more mt0">
+									{{cms.part1.part_title}}
+								</h2>
+							</div>
+				  		</div>
+				  	</a>
+				  	<a href="/part3/" class="next-item">
+				  		<div class="col-sm-5">
+				  			<div class=" bordered-broken righted">
+								<h3 class="tracked uppercase">
+									Part 3
+								</h3>
+								<h2 class="ss-extrabold uppercase tracked-more mt0">
+									{{cms.part3.part_title}}
+								</h2>
+							</div>
+				  		</div>
+				  		<div class="col-sm-1 mt3 hidden-xs">
+							<span class="icon large" data-icon="„"></span>
+				  		</div>	
+			  		</a>  	
+				{% endif %}
+
+				{% if currentUrl == '/part3/' %}
+					<a href="/part2/" class="next-item">
+						<div class="col-sm-1 righted mt3 hidden-xs">
+							<span class="icon righted large" data-icon="‰"></span>
+						</div>
+				  		<div class="col-sm-5">
+				  			<div class=" bordered-broken">
+								<h3 class="tracked uppercase">
+									Part 2
+								</h3>
+								<h2 class="ss-extrabold uppercase tracked-more mt0">
+									{{cms.part2.part_title}}
+								</h2>
+							</div>
+				  		</div>
+				  	</a>
+				  	<a href="/epilogue/" class="next-item">
+				  		<div class="col-sm-5">
+				  			<div class=" bordered-broken righted">
+								<h2 class="ss-extrabold uppercase tracked-more mt2">
+									Epilogue
+								</h2>
+							</div>
+				  		</div>
+				  		<div class="col-sm-1 mt3 hidden-xs">
+							<span class="icon large" data-icon="„"></span>
+				  		</div>	
+			  		</a> 
+				{% endif %}								
+
+				{% if currentUrl == '/epilogue/' %}
+					<a href="/part3/" class="next-item">
+						<div class="col-sm-1 mt3 col-sm-offset-2 hidden-xs">
+							<span class="icon large" data-icon="‰"></span>
+						</div>						
+				  		<div class="col-sm-5">
+				  			<div class=" bordered-broken">
+								<h3 class="tracked uppercase">
+									Part 3
+								</h3>
+								<h2 class="ss-extrabold uppercase tracked-more mt0">
+									{{cms.part3.part_title}}
+								</h2>
+							</div>
+				  		</div>
+			  		</a>
+				{% endif %}				
+		
+	    	</div>
+		</div>
+	</div>
+</section>
