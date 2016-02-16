@@ -3053,8 +3053,10 @@ figcaption {
   }
 
   .wysiwyg p {
-    padding: 15px;
     font-size: 16px;
+  }
+  .wysiwyg p, .wysiwyg h1, .wysiwyg h2, .wysiwyg h3, .wysiwyg h4, .wysiwyg h5, .wysiwyg h6 {
+    padding: 0 15px;
   }
 
   .next-item {
