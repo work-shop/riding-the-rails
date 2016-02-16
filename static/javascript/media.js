@@ -9,9 +9,7 @@ $(document).one('dom-is-sized', function() {
 	setTimeout(function(){
 		$('.loading').addClass('loaded');
 		spy.initialize($('.target-initial'),$('.block'),40);
-		
-		//removed for deployment for content-input branch
-		// media.initialize();
+		media.initialize();
 	 }, 1000);	
 
 });
