@@ -17,6 +17,18 @@ $(document).one('dom-is-sized', function() {
 
 
 
+function modalMarkup( type, id ) {
+	return [
+		'<div class="modal off modal-', type,
+		'" id="modal-', type,
+		'-', id,
+		'" data-type="', type,
+		'" data-id="', id,
+		'" ><h2 class="p3">', type,
+		' id="', id,
+		'"</h2></div>'
+	].join('');
+}
 
 function Media(){
 
@@ -29,17 +41,6 @@ function Media(){
 	var link5 = '">Link to ';
 	var link6 = ' id="'
 	var link7 = '"</a>';
-
-	//modal markup structure
-	//<div class="modal off modal-{{type}}" id="modal-{{type}}-{{id}}" data-type="{{type}}" data-id="{{id}}" >Modal {{type}} id="{{id}}"</div>
-	var modal1 = '<div class="modal off modal-';
-	var modal2 = '" id="modal-';
-	var modal3 = '-';
-	var modal4 = '" data-type="';
-	var modal5 = '" data-id="';
-	var modal6 = '" ><h2 class="p3">';	
-	var modal7 = ' id="';
-	var modal8 = '"</h2></div>';
 
 	var modalContainer = $('#media');
 
@@ -91,8 +92,10 @@ function Media(){
 			$(this).replaceWith(link);			
 
 			//build a modal off our desired markup structure(see top of file)
-			var modal = modal1 + type + modal2 + type + modal3 + id + modal4 + type + modal5 + id + modal6 + type + modal7 + id + modal8; 
+			//var modal = modal1 + type + modal2 + type + modal3 + id + modal4 + type + modal5 + id + modal6 + type + modal7 + id + modal8; 
 			var modalId = '#modal-' + type + '-' + id;
+
+			var modal = modalMarkup( type, id );
 
 			//insert the modal into the appropriate container
 			modalContainer.append(modal);	
