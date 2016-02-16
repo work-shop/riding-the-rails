@@ -2211,7 +2211,7 @@ p {
   letter-spacing: .05em;
 }
 
-.tracked-more, .part-number, .part-title, #header a, #menu-toggle #label span {
+.tracked-more, .part-number, .part-title, #header a, #menu-toggle #label span, .wysiwyg h4 {
   letter-spacing: .15em;
 }
 
@@ -2422,7 +2422,7 @@ p {
   color: #222;
 }
 
-.medium, #header a {
+.medium, #header a, .wysiwyg h4 {
   color: #9B9B9B;
 }
 
@@ -2982,9 +2982,13 @@ figure[data-type=quote] cite:before {
   padding: 0 60px;
   margin-bottom: 30px;
 }
+.wysiwyg h4 {
+  margin-bottom: 0;
+  margin-top: 60px;
+}
 .wysiwyg h3 {
   margin-top: 0;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 .wysiwyg figure {
   margin-bottom: 75px;
